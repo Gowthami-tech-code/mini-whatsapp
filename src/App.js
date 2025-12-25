@@ -65,7 +65,7 @@ function App() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const newSocket = io("http://localhost:5000");
+    const newSocket = io("https://mini-whatsapp-backend-6dbr.onrender.com");
 
     newSocket.on("receive_message", (data) => {
       setMessages((prev) => [...prev, data]);
